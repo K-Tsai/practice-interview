@@ -6,13 +6,13 @@ class Profile extends React.Component {
   	return (
     	<div className="profileInfo">
 			<p className="firstName">	
-				{this.props.firstName}
+				First Name: {this.props.firstName}
 			</p>
 			<p className = "lastName">
-				{this.props.lastName}
+				Last Name: {this.props.lastName}
 			</p>
 			<p className = "age">
-				{this.props.age}
+				Age: {this.props.age}
 			</p>
     	</div>
   	);

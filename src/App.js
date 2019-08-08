@@ -20,10 +20,26 @@ class App extends React.Component {
 				<nav>
 					<Nav />
 				</nav>
+				<header>
+					<h1>Kevin's Grades</h1>
+				</header>
 				<main>
 					<Switch>
-						<Route path = '/profile' component = {Profile} />
-						<Route path= '/grades' component = {Grades} />
+						<Route 
+						path = '/profile' 
+						render= {(props) => 
+						<Profile {...props} 
+						firstName={this.state.fName} 
+						lastName={this.state.lName}
+						age={this.state.age}
+						/>}
+						/>
+						<Route path= '/grades'
+						render = {(props) => 
+						<Grades {...props}
+						grades={this.state.grades} 
+						/>}
+				 		/>
 					</Switch>
 				</main>
 				{/* <Profile  */}

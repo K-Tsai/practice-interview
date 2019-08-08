@@ -8,11 +8,13 @@ class Grades extends React.Component {
 
   	return (
     	<div className="grades">
+				<h2>Grades</h2>
 				{grades.map(x =>
 				{
 					return(<li>{x}</li>)
 				} 
 				)}
+				<h2>Average</h2>
 				<li>{arrAvg(grades)}</li>
     	</div>
   	);
